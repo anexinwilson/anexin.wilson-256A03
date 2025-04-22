@@ -10,11 +10,17 @@
     <div><a href="{% url 'events' %}" class="text-2xl font-bold">Eventure</a></div>
     <div>
       {% if user.is_authenticated %}
-        <span class="mr-4">Hi, {{user.username}}</span>
-        <a href="{% url 'signoutaccount' %}" class="text-red-600">Sign out</a>
+      <span class="mr-4">Hi, {{user.username}}</span>
+      <a href="{% url 'signoutaccount' %}" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        Sign Out
+      </a>
       {% else %}
-        <a href="{% url 'loginaccount' %}" class="mr-4 text-blue-600">Login</a>
-        <a href="{% url 'signupaccount' %}" class="text-green-600">Sign Up</a>
+      <a href="{% url 'loginaccount' %}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">
+        Login
+      </a>
+      <a href="{% url 'signupaccount' %}" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Sign Up
+      </a>
       {% endif %}
     </div>
   </nav>
