@@ -24,6 +24,10 @@
         <a href="{% url 'unregister_event' event.id %}" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Unregister</a>
       </div>
     {% endif %}
+
+    <div class="mt-6">
+      <a href="{% url 'events' %}" class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Go Home</a>
+    </div>
   {% endif %}
 </div>
 {% endblock %}
