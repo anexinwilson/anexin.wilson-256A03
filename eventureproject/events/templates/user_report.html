@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-6">User Report</h2>
+
+<table class="w-full table-auto border border-gray-300">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="border px-4 py-2 text-left">Username</th>
+      <th class="border px-4 py-2 text-left">Name</th>
+      <th class="border px-4 py-2 text-left">Email</th>
+      <th class="border px-4 py-2 text-left">User Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr class="border-t">
+        <td class="px-4 py-2">{{user.user.username}}</td>
+        <td class="px-4 py-2">{{user.user.first_name}}</td>
+        <td class="px-4 py-2">{{user.user.email}}</td>
+        <td class="px-4 py-2 capitalize">{{user.group.group_name}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

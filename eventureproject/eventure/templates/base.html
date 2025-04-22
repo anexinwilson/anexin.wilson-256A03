@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-white shadow p-4 mb-6 flex justify-between">
+    <div><a href="{% url 'events' %}" class="text-2xl font-bold">Eventure</a></div>
+    <div>
+      {% if user.is_authenticated %}
+        <span class="mr-4">Hi, {{user.username}}</span>
+        <a href="{% url 'signoutaccount' %}" class="text-red-600">Sign out</a>
+      {% else %}
+        <a href="{% url 'loginaccount' %}" class="mr-4 text-blue-600">Login</a>
+        <a href="{% url 'signupaccount' %}" class="text-green-600">Sign Up</a>
+      {% endif %}
+    </div>
+  </nav>
+  
+  <div class="container mx-auto px-4">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
