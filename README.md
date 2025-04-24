@@ -18,7 +18,7 @@ Eventure is an event-registration app built with Django. Administrators can crea
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/eventure.git
+   https://github.com/anexinwilson/anexin.wilson-256A03.git
    cd eventureproject 
    ```
 
